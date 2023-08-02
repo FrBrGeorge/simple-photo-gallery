@@ -50,4 +50,4 @@ class BaseGalleryLogic:
 
         # Write the data to the JSON file
         with open(images_data_path, "w", encoding="utf-8") as images_out:
-            json.dump(images_data, images_out, indent=4, separators=(",", ": "))
+            json.dump(images_data, images_out, indent=4, ensure_ascii=False, separators=(",", ": "))
