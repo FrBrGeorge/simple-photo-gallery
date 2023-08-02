@@ -226,7 +226,7 @@ def create_gallery_json(gallery_root, remote_link, use_defaults=False):
     # Save the configuration to a file
     gallery_config_path = os.path.join(gallery_root, "gallery.json")
     with open(gallery_config_path, "w", encoding="utf-8") as out:
-        json.dump(gallery_config, out, indent=4, separators=(",", ": "))
+        json.dump(gallery_config, out, indent=4, ensure_ascii=False, separators=(",", ": "))
 
     spg_common.log("Gallery config stored in gallery.json")
 
